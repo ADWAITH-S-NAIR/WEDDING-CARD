@@ -25,3 +25,5 @@ Thumbs.db
 
 # Build artifacts
 *.log
+.vercel
+.env*
