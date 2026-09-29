@@ -10,7 +10,7 @@ export default function MusicButton() {
     <motion.button
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 2, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
+      transition={{ delay: 2, duration: 0.5, ease: [0.34, 1.56, 0.64, 1] as const }}
       onClick={() => setMuted(!muted)}
       className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full glass-strong flex items-center justify-center cursor-pointer group"
       whileHover={{ scale: 1.1 }}

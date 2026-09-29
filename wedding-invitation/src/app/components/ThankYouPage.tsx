@@ -118,7 +118,7 @@ export default function ThankYouPage({ guestCount }: { guestCount: number }) {
   };
   const fadeUp = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const } },
   };
 
   return (
@@ -152,7 +152,7 @@ export default function ThankYouPage({ guestCount }: { guestCount: number }) {
         className="relative glass-card rounded-3xl w-full max-w-lg mx-auto overflow-hidden"
         initial={{ scale: 0.8, opacity: 0, y: 40 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as const, delay: 0.2 }}
         style={{ boxShadow: "0 0 80px rgba(201,168,76,0.12), 0 0 160px rgba(201,168,76,0.06), 0 30px 80px rgba(0,0,0,0.5)" }}
       >
         {/* Card interior glow */}

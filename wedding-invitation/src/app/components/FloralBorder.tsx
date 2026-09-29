@@ -77,7 +77,7 @@ export default function FloralBorder() {
           className={`absolute ${corner.className} w-28 h-28 md:w-36 md:h-36 pointer-events-none`}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.4 + i * 0.15, ease: [0.34, 1.56, 0.64, 1] }}
+          transition={{ duration: 1.2, delay: 0.4 + i * 0.15, ease: [0.34, 1.56, 0.64, 1] as const }}
         >
           <FloralCorner rotate={corner.rotate} className="w-full h-full" />
         </motion.div>

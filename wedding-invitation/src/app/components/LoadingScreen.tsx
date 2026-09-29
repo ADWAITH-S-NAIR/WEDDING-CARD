@@ -11,7 +11,7 @@ const BloomingFlower = ({ x, y, delay, size = 60 }: { x: string; y: string; dela
       style={{ width: size, height: size, position: "absolute", left: x, top: y }}
       initial={{ scale: 0, opacity: 0, rotate: -180 }}
       animate={{ scale: 1, opacity: 1, rotate: 0 }}
-      transition={{ duration: 1.4, delay, ease: [0.34, 1.56, 0.64, 1] }}
+      transition={{ duration: 1.4, delay, ease: [0.34, 1.56, 0.64, 1] as const }}
     >
       {/* Center glow */}
       <circle cx="0" cy="0" r="18" fill="rgba(201,168,76,0.15)" />

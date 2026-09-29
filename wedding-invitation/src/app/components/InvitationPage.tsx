@@ -108,7 +108,7 @@ export default function InvitationPage({ onConfirm }: { onConfirm: () => void })
   };
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const } },
   };
 
   return (
@@ -126,7 +126,7 @@ export default function InvitationPage({ onConfirm }: { onConfirm: () => void })
         className="relative glass-card rounded-3xl w-full max-w-2xl mx-auto overflow-hidden"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as const }}
         style={{ boxShadow: "0 0 60px rgba(201,168,76,0.1), 0 0 120px rgba(201,168,76,0.05), 0 30px 60px rgba(0,0,0,0.4)" }}
       >
         {/* Background gradient overlay */}
